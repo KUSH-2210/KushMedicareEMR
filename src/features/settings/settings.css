@@ -1,0 +1,23 @@
+.settings-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.settings-card { padding: 24px; border: 1px solid var(--border); border-radius: 15px; background: #fff; display: grid; gap: 16px; }
+.settings-card > label, .settings-pair label { display: flex; flex-direction: column; gap: 7px; font-size: .78rem; font-weight: 650; }
+.settings-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.settings-card > .button { justify-self: start; }
+.private-upload { margin-top: 5px; padding-top: 17px; border-top: 1px solid var(--border); display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 12px; }
+.private-upload > div { display: flex; flex-direction: column; gap: 3px; }
+.private-upload strong { font-size: .82rem; }
+.private-upload span { color: var(--muted); font-size: .7rem; }
+.private-upload img { grid-column: 1 / -1; width: auto; max-width: min(100%, 260px); max-height: 90px; object-fit: contain; object-position: left center; }
+.private-upload .signature-preview { max-height: 70px; }
+.private-upload label { margin: 0; }
+.private-upload input[type='file'] { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
+.staff-settings { margin-top: 18px; }
+.staff-list { border: 1px solid var(--border); border-radius: 11px; overflow: hidden; }
+.staff-row { min-height: 66px; padding: 10px 13px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: auto 1fr minmax(130px, 190px); align-items: center; gap: 11px; }
+.staff-row:last-child { border-bottom: 0; }
+.staff-row > div { display: flex; flex-direction: column; gap: 3px; }
+.staff-row strong { font-size: .8rem; }.staff-row div span, .settings-note { color: var(--muted); font-size: .7rem; }
+.staff-row select { padding: 9px 11px; }
+.settings-note { margin: 0; line-height: 1.5; }
+@media (max-width: 900px) { .settings-grid { grid-template-columns: 1fr; } }
+@media (max-width: 620px) { .settings-card { padding: 20px 16px; } .settings-pair { grid-template-columns: 1fr; } .private-upload { grid-template-columns: 1fr; } .private-upload img { grid-column: auto; } .staff-row { grid-template-columns: auto 1fr; }.staff-row select { grid-column: 1 / -1; } }
